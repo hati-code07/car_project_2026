@@ -3,7 +3,8 @@
   <v-row justify="center">
   <v-col cols="12" sm="8" lg="6">
       <v-card class="elevetion-12" >
-      <v-toolbar dark color="primary" class="pl-4" > Login
+      <v-toolbar dark color="primary" class="pl-4" >
+        <v-toolbar-title> Login</v-toolbar-title> 
   </v-toolbar>
   <v-card-text>
   <v-form v-model="valid" ref="form" validation>
