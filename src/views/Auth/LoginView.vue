@@ -6,46 +6,60 @@
       <v-toolbar dark color="primary" class="pl-4" > Login
   </v-toolbar>
   <v-card-text>
-  <v-form>
+  <v-form v-model="valid" ref="form" validation>
+
   <v-text-field
       prepend-icon="mdi-account"
       name="email"
       label="Email"
       type="email"
-      v-model="email">
+      v-model="email"
+      :rules="emailRules">
   </v-text-field>
+
+
   <v-text-field
       prepend-icon="mdi-lock"
       name="password"
       label="Password"
-      type="password">
+      type="password"
+      v-model="password"
+      :rules="passwordRules">
   </v-text-field>
-  <v-text-field
-  prepend-icon="mdi-lock"
-  name="password"
-  label="Password"
-  type="password"
-  v-model="password">
-</v-text-field>
   </v-form>
   </v-card-text>
   <v-card-actions>
     <v-spacer></v-spacer>
-    <v-btn color="primary">Login</v-btn>
+    <v-btn 
+     color="primary"
+    :disabled="!valid"
+    @click="login">Login</v-btn>
     </v-card-actions>
   </v-card>
   </v-col>
   </v-row>
 </v-container>
 </template>
+
+
 <script>
 export default {
   data () {
     return {
       email: "",
-      password: ""
+      password: "",
+      valid: false,
+			emailRules: [
+			v => !!v || 'E-mail is required',
+         	v => /.+@.+\..+/.test(v) || 'E-mail must be 				valid'
+			],
+			passwordRules: [
+	        v => !!v || 'Password is required',
+	        v => (v && v.length >= 6) || 'Password must 			be more or equel than 6 characters'
+	        ]
+		} 	
+	}
+  
 
-            }
-  }
 }
 </script>
