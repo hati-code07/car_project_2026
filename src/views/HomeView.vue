@@ -66,31 +66,31 @@ export default {
         return {
             ads: [
                 {
-                    title: "First",
-                    desc: "First Desc",
+                    title: "Porsche",
+                    desc: "PORSHE",
                     promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+                    src: "/img/654b70ca097f97945661236146e40e39.jpg",
                     id: "1"
                 },
                 {
-                    title: "Second",
-                    desc: "Second Desc",
+                    title: "GOLF",
+                    desc: "Volkswagen Golf",
                     promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+                    src: "/img/car_1.png",
                     id: "2"
                 },
                 {
-                    title: "Third",
-                    desc: "Third Desc",
+                    title: "BMW",
+                    desc: "M5 F90",
                     promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+                    src: "/img/car_2.png",
                     id: "3"
                 },
                 {
-                    title: "Fourth",
-                    desc: "Fourth Desc",
+                    title: "TAYOTA",
+                    desc: "CAMRY",
                     promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+                    src: "/img/car_3.png",
                     id: "4"
                 }
             ]
