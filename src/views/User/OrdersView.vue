@@ -29,10 +29,15 @@ color="primary"
 
       <v-list-item-action>
       <v-checkbox
-      input-value="false"
+      input-value="order.done"
       color="primary"
+      @click="markDone(order)"
       ></v-checkbox>
       </v-list-item-action>
+
+
+
+
       </template>
 
       <v-list-item-title>Title</v-list-item-title>
@@ -57,6 +62,12 @@ export default {
   data() {
     return {
     }
-  }
+  },
+        methods: {
+          markDone(order) {
+              order.done = !order.done;
+              console.log(order.done);
+      },
+},
 }
 </script>
